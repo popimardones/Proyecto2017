@@ -21,8 +21,8 @@ lista=cm.predict(comentarios, params)
 print(lista)
 comentariosPositivos = 0
 total= len(lista)
-for holi in range(0, len(lista)):
-	comentariosPositivos += lista[holi]
+for index in range(0, len(lista)):
+	comentariosPositivos += lista[index]
 print(((comentariosPositivos/total)*100))
 comentariosNegativos = total - comentariosPositivos
 print(((comentariosNegativos/total)*100))
