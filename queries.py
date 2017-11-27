@@ -42,12 +42,9 @@ for candidato in candidatos:
 		comments = []
 		for x in range(0, len(presidenteSoloPostId_List)):
 			collection = database[candidato+"CommentsOfPost"+presidenteSoloPostId_List[x]]
-
-			# Created with Studio 3T, the IDE for MongoDB - https://studio3t.com/
 			query = {}
 			projection = {}
 			projection["message"] = 1
-
 			cursor = collection.find(query, projection = projection)
 			try:
 			    for doc in cursor:
